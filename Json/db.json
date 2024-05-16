@@ -1,0 +1,190 @@
+{
+  "employee": [
+    {
+      "username": "Ram",
+      "name": "Ramer",
+      "password": "123",
+      "confirmPassword": "123",
+      "departmentId": "10",
+      "phone": "12546",
+      "emailId": "aiswaryababulal369@gmail.com",
+      "dob": "2023-12-13",
+      "state": "Goa",
+      "id": 5
+    },
+    {
+      "username": "Adam",
+      "name": "adhi",
+      "password": "123",
+      "confirmPassword": "123",
+      "departmentId": "6",
+      "phone": "12546",
+      "emailId": "sdcd",
+      "dob": "2023-12-13",
+      "state": "Haryana",
+      "id": 6
+    },
+    {
+      "username": "Adam",
+      "name": "adhi",
+      "password": "123",
+      "confirmPassword": "123",
+      "departmentId": "9",
+      "phone": "1254664",
+      "emailId": "dcdc",
+      "dob": "2023-12-13",
+      "state": "Kerala",
+      "id": 7
+    }
+  ],
+  "department": [
+    {
+      "username": "Development",
+      "name": "devop",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 6
+    },
+    {
+      "username": "haiiieeey",
+      "name": "helloo00",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 9
+    },
+    {
+      "username": "Dev",
+      "name": "devops",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "username": "Delivery",
+      "name": "Del",
+      "departmentId": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 11
+    },
+    {
+      "username": "Guy",
+      "name": "Nice",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 12
+    }
+  ],
+  "states": [
+    {
+      "name": "Andaman and Nicobar Islands"
+    },
+    {
+      "name": "Andhra Pradesh"
+    },
+    {
+      "name": "Arunachal Pradesh"
+    },
+    {
+      "name": "Assam"
+    },
+    {
+      "name": "Bihar"
+    },
+    {
+      "name": "Chandigarh"
+    },
+    {
+      "name": "Chhattisgarh"
+    },
+    {
+      "name": "Dadra and Nagar Haveli"
+    },
+    {
+      "name": "Daman and Diu"
+    },
+    {
+      "name": "Delhi"
+    },
+    {
+      "name": "Goa"
+    },
+    {
+      "name": "Gujarat"
+    },
+    {
+      "name": "Haryana"
+    },
+    {
+      "name": "Himachal Pradesh"
+    },
+    {
+      "name": "Jammu and Kashmir"
+    },
+    {
+      "name": "Jharkhand"
+    },
+    {
+      "name": "Karnataka"
+    },
+    {
+      "name": "Kerala"
+    },
+    {
+      "name": "Ladakh"
+    },
+    {
+      "name": "Lakshadweep"
+    },
+    {
+      "name": "Madhya Pradesh"
+    },
+    {
+      "name": "Maharashtra"
+    },
+    {
+      "name": "Manipur"
+    },
+    {
+      "name": "Meghalaya"
+    },
+    {
+      "name": "Mizoram"
+    },
+    {
+      "name": "Nagaland"
+    },
+    {
+      "name": "Odisha"
+    },
+    {
+      "name": "Puducherry"
+    },
+    {
+      "name": "Punjab"
+    },
+    {
+      "name": "Rajasthan"
+    },
+    {
+      "name": "Sikkim"
+    },
+    {
+      "name": "Tamil Nadu"
+    },
+    {
+      "name": "Telangana"
+    },
+    {
+      "name": "Tripura"
+    },
+    {
+      "name": "Uttar Pradesh"
+    },
+    {
+      "name": "Uttarakhand"
+    },
+    {
+      "name": "West Bengal"
+    }
+  ]
+}

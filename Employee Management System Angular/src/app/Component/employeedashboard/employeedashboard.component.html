@@ -1,0 +1,58 @@
+
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <h1 class="text-center">Employee Management System</h1>
+            <h3 class="text-center fw-bold">Employee DashBoard</h3>
+            <div
+                class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+            </div>
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{passedObject?.name}}</mat-card-title>                     
+                    </mat-card-header>
+                    <img mat-card-image src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>User Name : {{passedObject?.username}}</p>
+                      <p>Name : {{passedObject?.name}}</p>  
+                      <p>Employee Id : {{passedObject?.id}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <div class=".action">
+                      <button mat-raised-button color="primary" (click)="updateEmployee(passedObject)">Update</button>
+                      <button mat-flat-button color="warn" (click)="deleteEmployee(passedObject?.id)">Delete</button>
+                      </div> 
+                    </mat-card-actions>
+                  </mat-card> 
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="example-container mat-elevation-z8">
+                  <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title> Hi...! {{passedObject?.name}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p class="text-center fw-bold large">Profile Details</p>
+                      <p>User Name : {{passedObject?.username}}</p>
+                      <p>Name : {{passedObject?.name}}</p>  
+                      <p>Employee Id : {{passedObject?.id}}</p>
+                      <p>Department Id : {{passedObject?.departmentId}}</p>
+                      <p>Email : {{passedObject?.email}}</p>
+                      <p>Phone : {{passedObject?.phone}}</p>
+                      <p>Date of Birth : {{passedObject?.dob}}</p>
+                      <p>State : {{passedObject?.state}}</p>
+                    </mat-card-content>
+                  </mat-card> 
+                    
+                  </div>
+                  
+                      
+            </div>
+        </div>
+    </div>
+</section>
+

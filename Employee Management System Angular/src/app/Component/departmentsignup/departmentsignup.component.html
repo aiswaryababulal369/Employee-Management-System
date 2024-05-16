@@ -1,0 +1,68 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <h1 class="text-center">Employee Management System</h1>
+            <h3 class="text-center"> {{ isEditMode ? 'Update Department' : 'Register Department' }}</h3>
+            <div
+                class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+            </div>
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form [formGroup]="form" (ngSubmit)="onLogin()">
+                    <div class="form-group">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input formControlName="username" type="text" id="form3Example1" class="form-control form-control-lg"
+                            placeholder="Enter  the user name" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+                        <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                                <div *ngIf="f['username'].errors['required']">Username is required</div>
+                    </div>
+                </div>
+                    <div class="form-outline mb-4">
+                        <input formControlName="name" type="text" id="form3Example2" class="form-control form-control-lg"
+                            placeholder="Enter  the Name" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors['required']">Name is required</div>
+                    </div>
+                    </div>
+                    
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input formControlName="password" type="password" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"/>
+                            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                    </div>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input formControlName="confirmPassword" type="password" id="form3Example4" class="form-control form-control-lg"
+                            placeholder="Confirm password" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"/>
+                            <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                                <div *ngIf="f['confirmPassword'].errors['required']">Password is required</div>
+                                <div *ngIf="f['confirmPassword'].errors['passwordsNotMatch']">Passwords do not match</div>
+                    </div>
+                    </div>
+
+
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;">{{ isEditMode ? 'Update' : 'Register' }}</button>
+                            
+                        <p class="small fw-bold mt-2 pt-1 mb-0">{{ isEditMode ? 'After the Updation' : 'Already have an account?' }} <a href="#!"
+                                class="link-danger">Login</a></p>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

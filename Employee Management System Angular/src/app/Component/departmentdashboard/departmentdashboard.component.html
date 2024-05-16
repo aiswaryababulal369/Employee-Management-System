@@ -1,0 +1,114 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <h1 class="text-center">Employee Management System</h1>
+            <h3 class="text-center fw-bold">Department DashBoard</h3>
+            <div
+                class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+            </div>
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{passedObject?.name}}</mat-card-title>
+  
+                      <mat-card-subtitle>No of Employees</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>User Name : {{passedObject?.username}}</p>
+                      <p>Name : {{passedObject?.name}}</p>  
+                      <p>Department Id : {{passedObject?.id}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <div class=".action">
+                      <button mat-raised-button color="primary"(click)="updateDepartment(passedObject)">Update</button>
+                      <button mat-flat-button color="warn" (click)="deleteDepartment(passedObject.id)">Delete</button>
+                      </div> 
+                    </mat-card-actions>
+                  </mat-card> 
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="example-container mat-elevation-z8">
+                    <h3>Employee Details</h3>
+                    <mat-table #table [dataSource]="employees">
+                        <h3>Employee Details</h3>
+                        {{employees | json}}
+                        <!-- #table [dataSource]="dataSource" -->
+                  
+                      <!--- Note that these columns can be defined in any order.
+                            The actual rendered columns are set as a property on the row definition" -->
+                  
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="no">
+                        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                        <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+                      </ng-container>
+                  
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                      </ng-container>
+                  
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="username">
+                        <mat-header-cell *matHeaderCellDef> Username </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.username}} </mat-cell>
+                      </ng-container>
+                  
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="employeeId">
+                        <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+                      </ng-container>
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="phone">
+                        <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="email">
+                        <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="dob">
+                        <mat-header-cell *matHeaderCellDef> dob </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.dob}} </mat-cell>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="state">
+                        <mat-header-cell *matHeaderCellDef> state </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+                      </ng-container>
+
+                      <!-- <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef> Action </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="action-buttons">
+                                <button mat-icon-button color="warn" aria-label="Edit" (click)="updateDepartment()">
+                                  <mat-icon>edit</mat-icon>
+                                </button>
+                                <button mat-icon-button color="warn" aria-label="Delete" (click)="deleteDepartment(element.id)">
+                                  <mat-icon>delete</mat-icon>
+                                </button>
+                              </div>
+                        </td>
+                      </ng-container> -->
+
+
+                  
+                      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                  </div>
+                  
+                      
+            </div>
+        </div>
+    </div>
+</section>

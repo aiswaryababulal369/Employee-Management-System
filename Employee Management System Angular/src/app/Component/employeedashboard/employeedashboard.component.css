@@ -1,0 +1,47 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp');
+    background-size: cover;
+  }
+
+  .mat-mdc-card {
+    margin-top: 30px;
+    background-color: aliceblue;
+  }
+ 
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    width: 100%; /* Set the width to 100% or adjust as needed */
+    max-width: none;
+    
+  }
+
+  .action-buttons {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 8px; /* Adjust the gap between buttons */
+  }
+
+  .custom-mat-table {
+    overflow: auto;
+    max-height: 500px;
+    width: 100%; /* Set the desired width */
+}
